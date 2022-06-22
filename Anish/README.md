@@ -1,5 +1,3 @@
-Not working atm
-
 some way of algo using functions defined by itself
 
 annotate functions with inputs/output types
