@@ -26,17 +26,18 @@ def printSeperator(sep):
     print(sep * 10)
 
 # [[str]], [str] -> bool
-def isHorizontalWin(board, rowToMatch):
+def isHorizontalWin(board):
     for i in board:
-        if i != rowToMatch:
+        #if all(i == board[0] for i in board):
+        if board.count(len(i) == i[0]) != len(i):
             return False 
 
     return True
 
 
 # [[str]], str
-def isVerticalWin(board)
-           
+#def isVerticalWin():
+
 
 
 b = generateBoard(3)

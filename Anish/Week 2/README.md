@@ -13,3 +13,11 @@ Generic fitness function with binary fitness of -100 or 100
 --> Doesn't work because no concept of functions genomes getting closer to result
 
 do generators work with deap?
+- functions with callable annotation?
+
+for now just rerun deap with new functions generated as primitives
+
+for loop function 
+def something():
+    for i in range()
+        do other()
