@@ -1,5 +1,3 @@
-import random
-
 def strip(s):
     return s.strip()
 
@@ -20,6 +18,8 @@ def rstrip(s):
 
 def swapcase(s):
     return s.swapcase()
+
+
 
 
 functions = {
