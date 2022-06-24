@@ -19,7 +19,8 @@ def rstrip(s):
 def swapcase(s):
     return s.swapcase()
 
-
+def testCallable(s):
+    return s + 1
 
 
 functions = {
@@ -29,7 +30,8 @@ functions = {
     'upper': upper,
     'lstrip': lstrip,
     'rstrip': rstrip,
-    'swapcase': swapcase
+    'swapcase': swapcase, 
+    'testCallable': testCallable
 }
 '''
 print(functions.get('strip')(' ABC '))
