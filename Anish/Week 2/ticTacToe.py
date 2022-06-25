@@ -29,21 +29,40 @@ def printSeperator(sep):
 def isHorizontalWin(board):
     for i in board:
         #if all(i == board[0] for i in board):
-        if board.count(len(i) == i[0]) != len(i):
-            return False 
+        #if board.count(len(i) == i[0]) != len(i):
+            #return False 
 
-    return True
+        if len(set(board)) == 1:
+            return True
+
+    return False
 
 
 # [[str]], str
-#def isVerticalWin():
+def isVerticalWin(board):
+    for i in range(len(board)):
+        for j in range(len(board)):
+            return 
+
+# [[str]] -> bool
+def isNegDiagonalWin(board):
+    return len(set([board[i][i] for i in range(len(board))])) == 1
+
+# [[str]] -> bool
+def isPosDiagonalWin(board):
+    return len(set([board[len(board)-1-i][i] for i in range(len(board))])) == 1
+    #return [board[len(board)-1-i][i] for i in range(len(board))]
+
+def isDiagonalWin(board):
+    return isPosDiagonalWin(board) or isNegDiagonalWin(board)
 
 
 
-b = generateBoard(3)
-printBoard(b)
 
-printSeperator('-')
+b = [
+    ['x', 'o', ' '], 
+    [' ', 'x', ' '], 
+    ['o', 'o', 'x']
+]
 
-play(b, 0, 2, 'x')
-printBoard(b)
+print(isDiagonalWin(b))
