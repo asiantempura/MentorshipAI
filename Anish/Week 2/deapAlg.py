@@ -1,9 +1,11 @@
 from deap import gp, creator, base, tools, algorithms
 import operator
-import modifiedFunctions
+from io import StringIO 
+import sys
 
 #pset = gp.PrimitiveSet("main", str, str)
 pset = gp.PrimitiveSet("main", 1)
+
 
 pset.addPrimitive(operator.methodcaller('strip'), 1, "strip")
 pset.addPrimitive(operator.methodcaller('lower'), 1, "lower")
@@ -11,6 +13,7 @@ pset.addPrimitive(operator.methodcaller('upper'), 1, "upper")
 pset.addPrimitive(operator.methodcaller('lstrip'), 1, "lstrip")
 pset.addPrimitive(operator.methodcaller('rstrip'), 1, "rstrip")
 pset.addPrimitive(operator.methodcaller('swapcase'), 1, "swapcase")
+pset.addPrimitive(operator.methodcaller('title'), 1, "title")
 
 creator.create("fitnessMin", base.Fitness, weights=(-1.0, -1.0, -1.0))
 creator.create("individual", gp.PrimitiveTree, fitness=creator.fitnessMin)
@@ -21,8 +24,8 @@ toolbox.register("individual", tools.initIterate, creator.individual, toolbox.ex
 toolbox.register("population", tools.initRepeat, list, toolbox.individual)
 toolbox.register("compile", gp.compile, pset=pset)
 
-def evalFitness(individual, startingStr=" ABC ", goal="abc"):
-    funcs = toolbox.compile(expr=individual)
+def evalFitness(individual, startingStr=" ABC ", goal="Abc"):
+    funcs = toolbox.compile(individual)
 
     result = funcs(startingStr)
 
