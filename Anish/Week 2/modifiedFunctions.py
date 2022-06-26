@@ -1,38 +1,27 @@
-def strip(s):
-    return s.strip()
-
-def lower(s):
-    return s.lower()
-
-def title(s):
-    return s.title()
-
-def upper(s):
-    return s.upper()
-
-def lstrip(s):
-    return s.lstrip()
-
-def rstrip(s):
-    return s.rstrip()
-
-def swapcase(s):
-    return s.swapcase()
+from functools import partial
 
 def testCallable(s):
     return s()
 
+def progn(*args):
+    for arg in args:
+        arg()
 
-functions = {
-    'strip': strip,
-    'lower': lower,
-    'title': title, 
-    'upper': upper,
-    'lstrip': lstrip,
-    'rstrip': rstrip,
-    'swapcase': swapcase, 
+def prog2(out1, out2): 
+    return partial(progn,out1,out2)
+
+
+def forLoop(func, numTimes):
+    for i in range(numTimes):
+        func()
+
+
+
+functions = { 
     'testCallable': testCallable
 }
+
+
 '''
 print(functions.get('strip')(' ABC '))
 print(functions.get('lower')(' ABC '))
