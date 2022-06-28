@@ -1,5 +1,6 @@
-# int -> [[str]]
-def generateBoard(numRows):
+Board = list[list[str]]
+
+def generateBoard(numRows: int) -> Board: 
     return [[str(i) for i in range(j * numRows, j * numRows + numRows)] for j in range(numRows)]
     #return [[''] * numRows] * numRows
     '''b = []
@@ -11,23 +12,19 @@ def generateBoard(numRows):
     return b'''
         
 
-# [[str]], int, int, str -> [[str]]
-def playMove(board, boardPosition, player):
-    board[boardPosition / len(board)][boardPosition % len(board)] = player 
+def playMove(board: Board, boardPosition: int, player: str) -> Board:
+    board[boardPosition // len(board)][boardPosition % len(board)] = player 
 
     return board
 
-# [[str]] -> None
-def printBoard(board):
+def printBoard(board: Board) -> None:
     for i in board:
         print(i)
 
-# str -> None
-def printSeperator(sep):
+def printSeperator(sep: str) -> None:
     print(sep * 10)
 
-# [[str]], [str] -> bool
-def isHorizontalWin(board):
+def isHorizontalWin(board: Board) -> bool:
     for i in board:
         #if all(i == board[0] for i in board):
         #if board.count(len(i) == i[0]) != len(i):
@@ -39,8 +36,7 @@ def isHorizontalWin(board):
     return False
 
 
-# [[str]], str
-def isVerticalWin(board):
+def isVerticalWin(board: Board) -> str:
     for i in range(len(board)):
         if len(set([board[j][i] for j in range(len(board))])) == 1:
             return True 
@@ -48,48 +44,38 @@ def isVerticalWin(board):
     return False
 
 
-# [[str]] -> bool
-def isNegDiagonalWin(board):
+def isNegDiagonalWin(board: Board) -> bool:
     return len(set([board[i][i] for i in range(len(board))])) == 1
 
-# [[str]] -> bool
-def isPosDiagonalWin(board):
+def isPosDiagonalWin(board: Board) -> bool:
     return len(set([board[len(board)-1-i][i] for i in range(len(board))])) == 1
     #return [board[len(board)-1-i][i] for i in range(len(board))]
 
-# [[str]] -> bool
-def isDiagonalWin(board):
+def isDiagonalWin(board: Board) -> bool:
     return isPosDiagonalWin(board) or isNegDiagonalWin(board)
 
-# [[str]], int -> bool
-def isDraw(board, numMoves):
+def isDraw(board: Board, numMoves: int) -> bool:
     return numMoves == len(board) ** 2
 
-# [[str]], int -> bool
-def isGameOver(board, numMoves):
+def isGameOver(board: Board, numMoves: int) -> bool:
     return isHorizontalWin(board) or isVerticalWin(board) or isDiagonalWin(board) or isDraw(board, numMoves)
 
-# _ -> int
-def takeInput():
-    return int(raw_input("Move: "))
+def takeInput() -> int:
+    return int(input("Move: "))
 
-# [[str]], int -> bool
-def checkInput(board, input):
+def checkInput(board: Board, input: int) -> bool:
     return 0 <= input and input < len(board) ** 2
 
-# _ -> None
-def printGameOver():
+def printGameOver() -> None:
     print('Game over!')
 
-# _ -> str
-def playerChar(numMoves):
+def playerChar(numMoves: int) -> str:
     if numMoves % 2 == 0:
         return 'x'
     else:
         return 'o'
 
-# _ -> None
-def main():
+def main() -> None:
     board = generateBoard(3)
     numMoves = 0
 
