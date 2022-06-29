@@ -21,3 +21,9 @@ for loop function
 def something():
     for i in range()
         do other()
+
+
+https://www.deepmind.com/blog/competitive-programming-with-alphacode
+https://research.infosupport.com/wp-content/uploads/Unit-test-generation-using-machine-Master-Thesis-Laurence-Saes.pdf
+http://xuwang.tech/paper/astnn_icse2019.pdf
+https://ieeexplore.ieee.org/document/8809752
