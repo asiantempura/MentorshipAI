@@ -1,4 +1,55 @@
+from itertools import * 
+from functools import *
+
 Board = list[list[str]]
+
+
+def generateBoardF(nums: list[int]):
+    #print(nums)
+    '''match nums:
+        case []:
+            return []
+        case [x, y, z]:
+            return [x, y, z]
+        case [x, y, z, *a]:
+            return [[x, y, z]] + generateBoardF(a)'''
+    if nums == []:
+        return 
+    elif len(nums) == 3:
+        return [nums]
+    else:
+        return [nums[0:3]] + generateBoardF(nums[3:])
+  
+#print(generateBoardF(list(range(0, 9))))
+  
+def if_then_else(cond, out1, out2):
+    if cond:
+        return out1
+    else:
+        if hasattr(out2, '__call__'):
+            return out2()
+        else:
+            return out2
+    
+def isListEmpty(l):
+    return not l
+
+def isLenThis(l, num):
+    return len(l) == num
+
+def seeBoard(l):
+    return if_then_else(isListEmpty(l), 
+                            [], 
+                            if_then_else(isLenThis(l, 3),
+                                [l],
+                                partial(appendPartial, [l[0:3]], partial(seeBoard, l[3:]))))
+    
+def appendPartial(out1, out2):
+    return out1 + out2()
+    
+
+print(seeBoard(list(range(0, 9))))
+
 
 def generateBoard(numRows: int) -> Board: 
     return [[str(i) for i in range(j * numRows, j * numRows + numRows)] for j in range(numRows)]
@@ -89,8 +140,10 @@ def main() -> None:
             playMove(board, move, playerChar(numMoves))
             numMoves += 1
 
+    printBoard()
     printGameOver()
 
-main()
+#main()
+
         
 
