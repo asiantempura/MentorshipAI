@@ -1,4 +1,5 @@
-from StringIO import StringIO 
+#from StringIO import StringIO 
+from io import StringIO
 import sys
 from functools import partial
 
@@ -18,7 +19,19 @@ def do2():
 def do3():
     print(3)
 
-prog2(do1, do2)(prog2(do3, do2))
+def forLoop(func, numTimes):
+    return [func(i) for i in numTimes()]
+
+''' 
+Purpose of For Loop:
+- Do something x times 
+- Iterate over iterable ex. for i in list
+- Use iterating counter ex. print(i) -> 1, 2, 3...
+'''
+
+print(forLoop(partial(str), partial(range, 3)))
+
+#prog2(do1, do2)(prog2(do3, do2))
 
 
 
