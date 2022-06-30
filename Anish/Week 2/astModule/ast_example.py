@@ -1,4 +1,5 @@
 import ast
+from curses.ascii import FF
 from pprint import pp, pprint
 import astpretty
 
@@ -6,7 +7,9 @@ import astpretty
 def main():
     with open("ast_example.py", "r") as source:
         tree = ast.parse(source.read())
-        astpretty.pprint(tree.body[6])
+
+        for i in tree.body:
+            astpretty.pprint(i, show_offsets=False)
         
 
     analyzer = Analyzer()
