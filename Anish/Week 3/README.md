@@ -36,6 +36,6 @@
 - https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8809752
 
 
-General NLP Concepts:
+**General NLP Concepts:**
 - Seq2Seq
 - Word2Vec
