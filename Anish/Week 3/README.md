@@ -1,4 +1,4 @@
-Datasets:
+**Datasets**:
 - https://github.com/microsoft/methods2test
     - Paper: https://arxiv.org/pdf/2203.12776v1.pdf
     - Java Unit Test -> Passing Method
@@ -29,9 +29,13 @@ Datasets:
     - Dataset of cleaned AST in python
 
 
-Papers:
-
+**Papers**:
 - https://arxiv.org/pdf/2001.00059v3.pdf
 - https://arxiv.org/pdf/1810.09230.pdf
 - http://xuwang.tech/paper/astnn_icse2019.pdf
 - https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8809752
+
+
+General NLP Concepts:
+- Seq2Seq
+- Word2Vec
