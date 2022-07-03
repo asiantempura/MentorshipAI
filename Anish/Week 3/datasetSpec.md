@@ -26,3 +26,17 @@
     - Not applicable to real world
       - Maybe ML model on DIY lang generalizes to any AST with little modification?
 
+
+### Concepts
+- Console Output
+- Strings
+- Conditionals 
+- Functions
+- Lists
+  - Dictionaries (Python)
+- Functions
+- Loops
+- Advanced
+  - List comprehensions (Python)
+  - List slicing (Python)
+  - Lambdas (Python)
