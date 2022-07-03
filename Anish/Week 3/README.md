@@ -39,3 +39,10 @@
 **General NLP Concepts:**
 - Seq2Seq
 - Word2Vec
+
+**Common Approaches/Keywords in Code Generation**
+- CNN
+- RNN
+- LSTM
+- Tokenization
+- AST
