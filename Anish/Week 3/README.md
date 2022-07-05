@@ -25,6 +25,7 @@
 - [150K Python Parsed AST](https://www.sri.inf.ethz.ch/py150)
     - [Learning and Evaluating Contextual Embedding of Source Code](https://arxiv.org/pdf/2001.00059v3.pdf)
     - Dataset of cleaned AST in python
+- [ProgramCreek - Query Open Source in Engish](https://www.programcreek.com/python/?action=search_nlp)
 
 
 **Papers**:
@@ -46,3 +47,7 @@
 - LSTM
 - Tokenization
 - AST
+
+Notes:
+- Annotate AST with names of certain things like words following if statement is boolean condition to "hardcode" structure of code
+- lib2to3 parses code, transforms AST, translate code to py
