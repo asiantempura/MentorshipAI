@@ -35,6 +35,8 @@
 - [POSTER: AST-Based Deep Learning for Detecting Malicious PowerShell](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8809752)
 - [A ten-minute introduction to sequence-to-sequence learning in Keras](https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html)
 - [★★★ Deep Learning for Source Code Modeling and Generation: Models, Applications and Challenges](https://arxiv.org/pdf/2002.05442.pdf)
+- [★★★ DEEPCODER: LEARNING TO WRITE PROGRAMS](https://arxiv.org/pdf/1611.01989.pdf)
+- [A Machine Learning Framework for Programming by Example](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/11/83-A-Machine-Learning-Framework-for-Programming-by-Example.pdf)
 
 
 **General NLP Concepts:**

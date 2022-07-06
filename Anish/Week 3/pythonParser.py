@@ -34,4 +34,4 @@ astTokens = asttokens.ASTTokens(contents, parse=True)
 for i in astTokens.tokens:
     print(i)
 
-print(astroid.parse('1+2'))
+print(astroid.parse('1+2').body)
