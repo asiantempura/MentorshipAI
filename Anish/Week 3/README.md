@@ -38,6 +38,7 @@
 - [★★★ DEEPCODER: LEARNING TO WRITE PROGRAMS](https://arxiv.org/pdf/1611.01989.pdf)
 - [A Machine Learning Framework for Programming by Example](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/11/83-A-Machine-Learning-Framework-for-Programming-by-Example.pdf)
 - [DeepCoder Conference Slide Deck](https://www.cs.columbia.edu/~suman/harry_slides.pdf)
+- [TRANX: A Transition-based Neural Abstract Syntax Parser for Semantic Parsing and Code Generation](https://arxiv.org/pdf/1810.02720v1.pdf)
 
 
 **General NLP Concepts:**
