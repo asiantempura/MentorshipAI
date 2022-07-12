@@ -24,7 +24,15 @@ with tokenize.open(inputData) as f:
         #print(i)
 
 def likeOneHotEncoding(tree: ast.AST, tokens: list[tuple]) -> list[int]:
-    
-    print(tree.args.args[0].lineno)
+    tree.name = 'func'
+    print(tree.name)
 
-print(likeOneHotEncoding(prettyPrint, tokens))    
+    counter = 0
+    for i in range(len(tree.args.args)):
+        tree.args.args[i].arg = 'out' + str(counter)
+
+
+
+print(likeOneHotEncoding(prettyPrint, tokens)) 
+print(astpretty.pprint(prettyPrint, indent=2))
+print(ast.unparse(prettyPrint))
