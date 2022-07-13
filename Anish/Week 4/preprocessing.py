@@ -5,6 +5,9 @@ import astpretty
 import tokenize
 import asttokens
 import astroid
+import numpy
+from sklearn import *
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 
 contents = ''
 inputData = 'inputData.py'
@@ -24,15 +27,44 @@ with tokenize.open(inputData) as f:
         #print(i)
 
 def likeOneHotEncoding(tree: ast.AST, tokens: list[tuple]) -> list[int]:
+    # Normalizing function name
     tree.name = 'func'
-    print(tree.name)
+    #print(tree.name)
 
+    # Normalizing input variable names in function signature
     counter = 0
     for i in range(len(tree.args.args)):
         tree.args.args[i].arg = 'out' + str(counter)
 
+    # Record all functions 
+    funcs = []
+    for i in tree.body:
+        #print(type(i))
+
+        if type(i) == ast.Assign: 
+            print(i.value.func.attr)
+            funcs.append(str(i.value.func.attr))
+        elif type(i) == ast.Return:
+            pass
+
+
+    funcs = numpy.array(funcs)
+    print(funcs)
+
+    intEncoded = LabelEncoder().fit_transform(funcs)
+    print(intEncoded)
+
+    intEncoded = intEncoded.reshape(len(intEncoded), 1)
+    print(intEncoded)
+    oneHotEncoded = OneHotEncoder(sparse=False).fit_transform(intEncoded)
+    #print(oneHotEncoded)
+
+    return oneHotEncoded
+
+        
+
 
 
 print(likeOneHotEncoding(prettyPrint, tokens)) 
-print(astpretty.pprint(prettyPrint, indent=2))
+#print(astpretty.pprint(prettyPrint, indent=2))
 print(ast.unparse(prettyPrint))
