@@ -6,3 +6,4 @@ Encoding Implementations:
 - (AST-Transformer: Encoding Abstract Syntax Trees Efficiently for Code Summarization)[https://arxiv.org/pdf/2112.01184.pdf]
 
 - (Graph Encoding Approaches)[https://towardsdatascience.com/graph-embeddings-the-summary-cc6075aba007]
+- (Recursive Neural Nets Tutorial)[https://developer.nvidia.com/blog/recursive-neural-networks-pytorch/]
