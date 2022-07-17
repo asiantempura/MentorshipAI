@@ -7,3 +7,4 @@ Encoding Implementations:
 
 - (Graph Encoding Approaches)[https://towardsdatascience.com/graph-embeddings-the-summary-cc6075aba007]
 - (Recursive Neural Nets Tutorial)[https://developer.nvidia.com/blog/recursive-neural-networks-pytorch/]
+- (Graph Neural Net Tutorial)[https://pytorch-geometric.readthedocs.io/en/latest/notes/introduction.html]
