@@ -1,3 +1,4 @@
 - (Graph Neural Network Tutorial Explanation)[https://colab.research.google.com/drive/1h3-vJGRVloF5zStxL5I0rSy4ZUPNsjy8?usp=sharing]
 - (Detecting Code Clones Using GNNs)[https://arxiv.org/pdf/2002.08653.pdf]
 - https://arxiv.org/pdf/1603.08861.pdf
+- (GNNs explained simply)[https://neptune.ai/blog/graph-neural-network-and-some-of-gnn-applications#:~:text=Graph%20Neural%20Networks%20(GNNs)%20are,and%20graph-level%20prediction%20tasks.]
